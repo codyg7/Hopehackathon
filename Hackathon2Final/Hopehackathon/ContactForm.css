@@ -1,0 +1,113 @@
+*{
+    font-weight: bold;
+}
+body {
+    background-image: linear-gradient(to right, yellowgreen, turquoise);
+  }
+  ul {
+    list-style: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: black;
+    padding-left: 0;
+  }
+  li{
+    display: inline;
+    border: 3px solid black ;
+    background-color: yellowgreen;
+    padding: 10px;
+  }
+  li a {
+    text-decoration: none; 
+  }
+  .Logo {
+    height: 200px;
+    width: 200px;
+  }
+  
+  .Recommended {
+    text-align: center;
+    background-color: white;
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+  
+  #contact {
+    margin: auto;
+  }
+  
+  input[type="text"],
+  [type="email"] {
+    width: 97%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin: 10px 0px;
+    border: solid 1px;
+  }
+  
+  #message {
+    width: 97%;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px 0px;
+    border: 1px solid black;
+  }
+  
+  #submit {
+    background: black;
+    color: white;
+    font-size: 1.2rem;
+    padding: 13px 20px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 80px;
+  }
+  
+  #submit:hover {
+    background: red;
+    color: white;
+  }
+  
+  .box {
+    background: #333;
+    color: #fff;
+  }
+  
+  .fas {
+    font-size: 3rem;
+  }
+  
+  footer {
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 7%;
+    margin-right: 7%;
+    padding: 20px;
+  }
+  
+  .social-container {
+    margin-left: 50px;
+  }
+  
+  .copyright {
+    margin-right: 50px;
+  }
+  
+  .instagram {
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .facebook {
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
