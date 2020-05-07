@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="Pollen.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+  <div class="Recommended">
+    <img class="Logo" src="../PollenImages1/WACK.png">
+
+    <nav>
+      <ul>
+        <li><a href="Pollen.html">Home</a></li>
+        <li><a href="ContactForm.html">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Pollen Tracker</h1>
+    <h3>Reporting the severity of pollen in your area for the next three days</h3>
+
+    <body>
+      <div class="containers">
+        <div class="ejsOutput">
+          <% if(data !== null){ %> <%for (let i = 0, l = data.length; i < l; i++
+        ){%>
+          <h2><%= data[i].display_name %></h2>
+          <p>Severity:</p>
+          <p>
+            <span style="color: <%= data[i].index.color %>;"><%= data[i].index.category %></span>
+          </p>
+          <p>is it in season:</p>
+          <p><%= data[i].in_season %></p>
+          <% } %>
+          <p style="visibility: hidden;"><%= data %></p>
+          <% } %> <% if(error !== null){ %>
+          <p><%= error %></p>
+          <% } %>
+        </div>
+      </div>
+
+  </div>
+  <h2 class="Recommended">Better To Be Safe Than Sniffling</h2>
+
+  <h3 class="Recommended">Based on the pollen forecast in your area these medications are recommended to help you obtain
+    allergy
+    relief
+    and win the war against pollen</h3>
+  </div>
+  <section class="ProductContainer">
+    <div class="card">
+      <img class="cardImg" src="https://images-na.ssl-images-amazon.com/images/I/81ecknpk5iL._AC_SL1500_.jpg"
+        alt="Avatar">
+      <div class="container">
+        <h2><b>Allegra Adult 30ct</b></h2>
+        <p> Allegra 24-Hour Allergy starts working in one hour for fast relief from
+          sneezing, runny nose, itchy and watery eyes, and itchy nose or throat </p>
+        <h3>$17.86</h3>
+        <a href="https://amzn.to/2Wrbv71" target="_blank"><button type="button">Buy Now</button></a>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <img class="cardImg" src="https://images-na.ssl-images-amazon.com/images/I/81spDXjt8fL._AC_SX425_.jpg"
+        alt="Avatar">
+      <div class="container">
+        <h2><b>Zyrtec Adult 30 ct</b></h2>
+        <p> Get effective allergy relief caused by hay fever and other upper
+          respiratory allergies from the #1 recommended brand among
+          over the counter oral antihistamines </p>
+        <h3>$19.99</h3>
+        <a href="https://amzn.to/2L2z2G4" target="_blank"><button type="button">Buy Now</button></a>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <img class="cardImg" src="https://images-na.ssl-images-amazon.com/images/I/710Nyo6TBxL._AC_SX425_.jpg"
+        alt="Avatar">
+      <div class="container">
+        <h2><b>Flonase Nasal Sprayt</b></h2>
+        <p> Flonase nose spray allergy medicine relieves nasal congestion, runny nose,
+          sneezing, itchy nose, and itchy, watery eyes </p>
+        <h3>$22.47</h3>
+        <a href="https://amzn.to/35vAycY" target="_blank"><button type="button">Buy Now</button></a>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <img class="cardImg" src="https://images-na.ssl-images-amazon.com/images/I/A1opZlLYW0L._AC_SL1500_.jpg"
+        alt="Avatar">
+      <div class="container">
+        <h2><b>Claritin RediTabs 30ct</b></h2>
+        <p> Orally disintegrating allergy tablet. No water needed.Powerful, 24 hour,
+          non drowsy indoor and outdoor allergy relief </p>
+        <h3>$19.99</h3>
+        <a href="https://amzn.to/3diRJkU" target="_blank"><button type="button">Buy Now</button></a>
+      </div>
+    </div>
+
+  </section>
+  <footer>
+
+    <div class="social-container">
+      <a href="https://instagram.com"><img class="instagram"
+          src="https://www.freepnglogos.com/uploads/download-instagram-png-logo-20.png" alt="instagram logo"></a>
+      <a href="https://facebook.com"><img class="facebook"
+          src="https://pngimg.com/uploads/facebook_logos/facebook_logos_PNG19750.png" alt="facebook logo"></a>
+    </div>
+    <p class="copyright">WACK &copy; 2020, All Right Reserved</p>
+  </footer>
+
+
+  <script src="server.js"></script>
+</body>
+
+</html>

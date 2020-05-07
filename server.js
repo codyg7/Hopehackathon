@@ -1,31 +1,42 @@
 const express = require("express");
 const request = require("request");
+const bodyParser = require("body-parser");
+require("dotenv").config();
 
 const app = express();
 
-const apiKey = "e561179c01f44c33a3ca65bb96eb383f";
+app.set("view engine", "ejs");
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+
+const apiKey = process.env.APIKEY;
 const lat = 35.13385;
 const long = -81.01888;
-const days = 1;
-let url = `https://api.breezometer.com/pollen/v2/forecast/daily?lat=${lat}&lon=${long}&key=${apiKey}&days=${days}&features=types_information,plants_information`;
+const days = 3;
+let url = `https://api.breezometer.com/pollen/v2/forecast/daily?lat=${lat}&lon=${long}&key=${apiKey}&days=${days}`;
 
-// app.get("/", (req, res) => {
-//   res.render("index");
-// });
-
-// app.post('/', (req, res) => {
-//     request(url, (err, response, body) => {
-
-//     })
-// })
-
-request(url, (err, response, body) => {
-  if (err) {
-    console.log("error", err);
-  } else {
-    console.log("body", body);
-  }
+app.get("/", (req, res) => {
+  request(url, (err, response, body) => {
+    if (err) {
+      res.render("index", { data: null, error: "Error please try again" });
+    } else {
+      let { data, error } = JSON.parse(body);
+      console.log(body);
+      if (data.length === 0) {
+        res.render("index", {
+          data: null,
+          error: "Sorry there was no data to return here",
+        });
+      } else {
+        const types = Object.values(data[2].types);
+        res.render("index", { data: types, error: null });
+      }
+    }
+  });
 });
+
+// <!-- short hand to output <%=-->
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

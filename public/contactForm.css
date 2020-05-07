@@ -19,6 +19,7 @@ body {
   }
   li a {
     text-decoration: none; 
+    color: black;
   }
   .Logo {
     height: 200px;
@@ -110,4 +111,3 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
   }
-  
